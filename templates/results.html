@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Pacifico">
+  <link rel="icon" href="http://obj-cache.cloud.ruanbekker.com/favicon.ico">
+  <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
+
+  <title>Bookmarks Search</title>
+
+</head>
+<body>
+
+  <div class="container">
+    <div style="background:transparent !important" class="jumbotron">
+      <div style="font-family:'Courier New', Courier, monospace">
+        <p>
+          <center>
+          <font size="8">Search Engine</font>
+          </center>
+        </p>
+      </div>
+    </div>
+
+ 
+  <!-- Show link and QRcode -->
+  <div >
+    <center>
+      <h1>Results: {{ items }} </h1>
+      <img src="{{ url_for('static', filename='QR.png')}}">
+    </center>
+  </div>
+
+    <br><br>
+      <footer class="footer">
+        <p>&copy; 2020 THITIWAT </p>
+      </footer>
+
+      </div>
+    </div>
+  </body>
+</html>
