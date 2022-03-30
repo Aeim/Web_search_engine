@@ -25,7 +25,7 @@ def search_request():
         img.save('static/QR.png')
     return render_template('results.html', items=items)
 
-#Convert link to QRcode function         
+#Convert link to QRcode function
 def toqr(data):
     qr = qrcode.QRCode(
         version=1,
@@ -34,13 +34,13 @@ def toqr(data):
     )
     qr.add_data(data)
     qr.make(fit=True)
-    img = qr.make_image(fill='black', back_color='white')   
+    img = qr.make_image(fill='black', back_color='white')
     return img
 
 #Search from google engine function
 def search(query):
-   
-    start =  1 
+
+    start =  1
     url = f"https://www.googleapis.com/customsearch/v1?key={API_KEY}&cx={SEARCH_ENGINE_ID}&q={query}&start={start}"
     data = requests.get(url).json()
     search_items = data.get("items")
@@ -53,4 +53,4 @@ def search(query):
 
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000)
+    app.run(host='0.0.0.0', port=5005)
